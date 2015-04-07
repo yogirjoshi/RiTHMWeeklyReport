@@ -4,6 +4,7 @@
 \usepackage{listings}
 \usepackage{centernot}
 \usepackage{amsmath,amssymb}
+\usepackage{graphicx}
 \newcommand{\rithm}{\textbf{RiTHM}\space}
 
 % Title Page
@@ -17,10 +18,49 @@
 \begin{abstract}
 Details about the current progress of \rithm development and journal paper
 \end{abstract}
-\section{Previous Results}
-\begin{itemize}
+\section{Current Results and Details about on-going items}
+
+
+	\subsection{Runtime verification in case of Missing Events}
+	\begin{itemize}
 	
+	\item \textbf{Missing Events} correspond to the case when Runtime Monitor does not receive a trace from the program which is being monitored.
 	
+	\item Events could be missed for a \emph{finite} amount of time or there could be \emph{persistent}. This loss of a stream of events could be formalized as either a \emph{finite} path within the program when the events could not be monitored or a possible \emph{infinite} path within the program when the events could not be monitored.
+	
+	\item In case of loss of trace for \emph{finite} time, the monitor cannot keep track of a finite path which is being executed in the program and hence it cannot provide verdict of certain type of \emph{LTL} properties.
+	
+	\item On the other hand, a \emph{persistent} loss of program trace implies that the monitor cannot validate any type of \emph{LTL} property.
+	
+    \includegraphics[scale=0.4]{LTLHierarchy.png}
+    
+    \item In above, \emph{LTL} hierarchy, there are 6 classes of specifications and the class \emph{Street} is the most expressive one and for most of the LTL formulae, it is not difficult to find an equivalent class which belongs to the class \emph{Street}.
+    
+    	\item Among the classes in \emph{LTL} hierarchy, in the event of loss of trace for a \emph{finite} path within the program, it is not possible to preserve soundness while monitoring \emph{Safety $(P_G)$}, \emph{Liveness $(P_F)$} and \emph{Prefix} which is boolean closure of \emph{Safety} and \emph{Liveness}
+    
+    \item This happens because a \emph{Liveness} property could be satisfied by a \emph{finite} path of a \emph{reactive} system and a \emph{Safety} property could be violated by \emph{finite} path. This \emph{finite} path could be the path whose trace was lost. Hence, the verdict given by a \emph{LTL} monitor might not show the actual status.
+    
+    \item On the other hand, the properties in the class \emph{Recurrence ($P_{GF}$)} and \emph{Persistence ($P_{FG}$)} could be monitored by tolerating a loss of trace for a \emph{finite} path in the program provided certain criteria are fulfilled by states of \emph{LTL} monitor.
+    
+    \item The formulas which belong to the class \emph{Recurrence ($P_{GF}$)} have B\"{u}chi acceptance condition where one of the final states if the B\"{u}chi automaton should visited by the run of infinite word infinitely often. Hence, a \emph{finite} loss of program trace would not affect the monitoring provided the monitor (which is constructed from B\"{u}chi automaton) visits one of the final states infinitely often.
+    
+    \item The formulas which belong to the class \emph{Persistence ($P_{FG}$)} have Persistence acceptance condition where one of the final states if the Persistence automaton should be continuously visited by the run of infinite word. Hence, a \emph{finite} loss of program trace would not affect the monitoring provided the monitor eventually visits one of the final states in a continuous manner.
+    
+    \item \emph{Strett} class, which is boolean closure of \emph{Persistence} and \emph{Recurrence} classes exhibits a combination of acceptance conditions of \emph{Persistence} and \emph{Recurrence}. 	
+    
+    \item For example., below LTL$_4$ monitor belongs to the \emph{Persistence} property $\diamondsuit \square a$ U $b$. Here, provided the monitor is in one of the states among (0,1), (1,0), (1,1), a finite loss of a stream of events could be tolerated without violating the \emph{asymptotic} evaluation the truth value of the formula. 
+     
+    \includegraphics[scale=0.6]{FGExample.png}
+    
+    \item Below LTL$_4$ monitor belongs to the \emph{Recurrence} property $\square \diamondsuit  a$ U $b$. Here, provided the monitor is in one of the states among (0,1), (1,0), a finite loss of a stream of events could be tolerated without violating the \emph{asymptotic} evaluation the truth value of the formula. 
+    
+    \includegraphics[scale=0.6]{GFExample.png}
+    
+    \item Future directions can include the proof of asymptotic correctness of the valuation of truth-value in the event of \emph{finite} loss of trace for  \emph{Recurrence ($P_{GF}$)}, \emph{Persistence ($P_{FG}$)} and \emph{Strett} classes.
+    
+    \end{itemize}
+	\subsection{\rithm development work}
+	\begin{itemize}
 	\item MTL parser has been developed, the monitor for MTL is being developed. \textbf{Update}: Including both Past-time and future-time MTL variants. 
 	\item For developing predicate specification language, work is done on analysis of script engines which can be used. Beanshell \url{http://www.beanshell.org/intro.html} is under consideration along with JavaScript engines which can be embedded into java code, and the predicate definitions could be specified using the languages of these engines.
 	
@@ -29,13 +69,14 @@ Details about the current progress of \rithm development and journal paper
 	\item Integration of DIME + \rithm - Papers worked on for analyzing the previous work. Work done by Smolka et al. focuses on using Markov Chains for providing probabilistic estimates on the satisfaction of specifications. On similar lines, Probabilistic Timed Automata could be used for specifying 
 	models of systems which exhibit the characteristics of incomplete-data for verification along with the requirement of hard real-time deadlines.
 	\item 'Lessons Learnt' section for journal paper is being worked upon.
+	
 	\item \rithm's monitor using specifications in the format of regular expressions is being enhanced so that monitoring is trace-length independent. The coding is in progress and we now use \url{http://www.brics.dk/automaton/doc/index.html} to create automaton from regular expression and input trace ti this automaton event by event. 
 	
-	
-	
-\end{itemize}
-    
 
+	
+
+	\end{itemize}
+	
 \section{Previous Results}
 \begin{itemize}
 \item 

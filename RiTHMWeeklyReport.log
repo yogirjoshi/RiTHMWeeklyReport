@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  7 APR 2015 15:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.6.17)  7 APR 2015 17:12
 entering extended mode
  %&-line parsing enabled.
 **RiTHMWeeklyReport.tex
@@ -304,24 +304,45 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count133
+))
+\Gin@req@height=\dimen119
+\Gin@req@width=\dimen120
+)
 (./RiTHMWeeklyReport.aux)
 \openout1 = `RiTHMWeeklyReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-Package hyperref Info: Link coloring OFF on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -329,109 +350,135 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count133
+\c@section@level=\count134
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
 
 (./RiTHMWeeklyReport.out) (./RiTHMWeeklyReport.out)
 \@outlinefile=\write3
 \openout3 = `RiTHMWeeklyReport.out'.
 
 \AtBeginShipoutBox=\box30
-\c@lstlisting=\count134
-LaTeX Font Info:    Try loading font information for U+msa on input line 16.
+\c@lstlisting=\count135
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count136
+\scratchdimen=\dimen121
+\scratchbox=\box31
+\nofMPsegments=\count137
+\nofMParguments=\count138
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen122
+\MPnumerator=\count140
+\everyMPtoPDFconversion=\toks25
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+ (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 16.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 27.
 
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 
-Overfull \hbox (13.05441pt too wide) in paragraph at lines 32--33
+<LTLHierarchy.png, id=19, 773.89125pt x 190.7125pt>
+File: LTLHierarchy.png Graphic file (type png)
+ <use LTLHierarchy.png>
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./LTLHierarchy.png (PNG co
+py)>] <FGExample.png, id=34, 410.4936pt x 323.0469pt>
+File: FGExample.png Graphic file (type png)
+ <use FGExample.png>
+[2] <GFExample.png, id=43, 332.442pt x 230.5413pt>
+File: GFExample.png Graphic file (type png)
+ <use GFExample.png> [3 <./FGExample.png (PNG copy)> <./GFExample.png (PNG copy
+)>]
+Overfull \hbox (13.05441pt too wide) in paragraph at lines 73--74
 \OT1/cmr/m/n/10 The cod-ing is in progress and we now use []$\OT1/cmtt/m/n/10 h
 ttp : / / www . brics . dk / automaton /
  []
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (10.33118pt too wide) in paragraph at lines 45--46
+Overfull \hbox (10.33118pt too wide) in paragraph at lines 86--87
 []\OT1/cmr/m/n/10 For 'C' pro-gram mon-i-tor-ing track - []$\OT1/cmtt/m/n/10 ht
 tps : / / forge . imag . fr / plugins /
  []
 
 
-Overfull \hbox (34.4429pt too wide) in paragraph at lines 46--47
+Overfull \hbox (34.4429pt too wide) in paragraph at lines 87--88
 []\OT1/cmr/m/n/10 For Of-fline mon-i-tor-ing track []$\OT1/cmtt/m/n/10 https : 
 / / forge . imag . fr / plugins / mediawiki /
  []
 
 
-Overfull \hbox (36.66753pt too wide) in paragraph at lines 53--54
+Overfull \hbox (36.66753pt too wide) in paragraph at lines 94--95
 []$\OMS/cmsy/m/n/10 8$ \OT1/cmr/m/n/10 tid: pthread[]mutex[]lock(tid, "ex[]mute
 x") $[][]\OMS/cmsy/m/n/10 !$ $}$ \OT1/cmr/m/n/10 pthread[]mutex[]unlock(tid,
  []
 
 
-Overfull \hbox (19.80632pt too wide) in paragraph at lines 55--56
+Overfull \hbox (19.80632pt too wide) in paragraph at lines 96--97
 []$\OMS/cmsy/m/n/10 8$ \OT1/cmr/m/n/10 tid: (pthread[]mutex[]lock(tid, 'ex[]mut
 ex') $\OMS/cmsy/m/n/10 _$ \OT1/cmr/m/n/10 pthread[]mutex[]destroy(tid,
  []
 
 
-Overfull \hbox (91.55934pt too wide) in paragraph at lines 55--56
+Overfull \hbox (91.55934pt too wide) in paragraph at lines 96--97
 \OT1/cmr/m/n/10 'ex[]mutex') $\OMS/cmsy/m/n/10 _$ \OT1/cmr/m/n/10 pthread[]mute
 x[]unlock(tid, 'ex[]mutex')) $[][]\OMS/cmsy/m/n/10 !$ $}[]$ \OT1/cmr/m/n/10 pth
 read[]mutex[]init(10000,
  []
 
-
-Overfull \hbox (23.80362pt too wide) in paragraph at lines 56--57
+[4]
+Overfull \hbox (23.80362pt too wide) in paragraph at lines 97--98
 []$\OMS/cmsy/m/n/10 8$ \OT1/cmr/m/n/10 tid: (pthread[]exit(tid)) $[][]\OMS/cmsy
 /m/n/10 !$ $}[]$ \OT1/cmr/m/n/10 pthread[]mutex[]unlock(tid, 'ex[]mutex')) 
  []
 
 
-Overfull \hbox (11.96992pt too wide) in paragraph at lines 58--59
+Overfull \hbox (11.96992pt too wide) in paragraph at lines 99--100
 \OT1/cmr/m/n/10 trace file is at []$\OT1/cmtt/m/n/10 https : / / github . com /
  yogirjoshi / datatools / blob / master /
  []
 
-[2] [3] (./RiTHMWeeklyReport.aux) ) 
+[5] [6] (./RiTHMWeeklyReport.aux) ) 
 Here is how much of TeX's memory you used:
- 6424 strings out of 493848
- 94223 string characters out of 1152823
- 198922 words of memory out of 3000000
- 9576 multiletter control sequences out of 15000+50000
- 12278 words of font info for 48 fonts, out of 3000000 for 9000
+ 7095 strings out of 493848
+ 102994 string characters out of 1152823
+ 212607 words of memory out of 3000000
+ 10216 multiletter control sequences out of 15000+50000
+ 12931 words of font info for 50 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,6n,36p,863b,930s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,36p,863b,1663s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-texlive/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-texlive/f
-onts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on RiTHMWeeklyReport.pdf (3 pages, 157675 bytes).
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+mr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-texlive/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb>
+Output written on RiTHMWeeklyReport.pdf (6 pages, 228065 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 147 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
