@@ -2,6 +2,8 @@
 \usepackage[nodayofweek,level]{datetime}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{centernot}
+\usepackage{amsmath,amssymb}
 \newcommand{\rithm}{\textbf{RiTHM}\space}
 
 % Title Page
@@ -16,6 +18,49 @@
 Details about the current progress of \rithm development and journal paper
 \end{abstract}
 \section{Current Results}
+\begin{itemize}
+	\item \rithm For CRV'15 competition which will be held with RV'15 conference, benchmarks are submitted for 'C' program monitoring track and Offline Monitoring track.
+	The details of benchmarks which are submitted can be found at 
+	\begin{itemize}
+		\item For 'C' program monitoring track - \url{https://forge.imag.fr/plugins/mediawiki/wiki/crv15/index.php/C_track}
+		\item For Offline monitoring track \url{https://forge.imag.fr/plugins/mediawiki/wiki/crv15/index.php/Offline_track}
+	\end{itemize}
+	\item The 'C' program benchmarks are designed to monitor a 'C' program which launches 0.1 million POSIX threads, and various properties have been specified using First Order Linear Temporal Logic (Past as well as Future time)
+	\item 'C' program which is being monitored can be found at \url{https://github.com/yogirjoshi/CRVBenchMark}
+	\item The specifications for 'C' program monitoring track are as per below
+	\begin{itemize}
+		\item $\forall$ tid: pthread\_create(tid) $\longrightarrow$ $\diamondsuit$ pthread\_running(tid)
+		\item $\forall$ tid: pthread\_mutex\_lock(tid, "ex\_mutex") $\longrightarrow$ $\diamondsuit$ pthread\_mutex\_unlock(tid, "ex\_mutex")
+		\item $\forall$ tid: pthread\_create(tid) $\longrightarrow$ $\diamondsuit$ pthread\_join(tid)
+		\item $\forall$ tid: (pthread\_mutex\_lock(tid, 'ex\_mutex') $\vee$ pthread\_mutex\_destroy(tid, 'ex\_mutex') $\vee$ pthread\_mutex\_unlock(tid, 'ex\_mutex')) $\longrightarrow$ $\diamondsuit^{-1}$ pthread\_mutex\_init(10000, 'ex\_mutex')))
+		\item $\forall$ tid: (pthread\_exit(tid)) $\longrightarrow$ $\diamondsuit^{-1}$ pthread\_mutex\_unlock(tid, 'ex\_mutex'))
+	\end{itemize}
+	\item For offline monitoring track, QNX trace-logger files have been used. The trace file is at \url{https://github.com/yogirjoshi/datatools/blob/master/CRV1.tar.gz}. It contains 0.1 million events on which the specifications will be validated.
+	\item Specifications are defined on various events of QNX threads. The specifications are as per below
+	\begin{itemize}
+		\item $\forall$  pid, $\forall$ tid : (thcreate $\longrightarrow$  $\diamondsuit$ thrunning)  (Satisfied by trace)
+		\item $\forall$ $>90\%$ pid, $\forall$ tid : ($\diamondsuit$ threply) - Vioated by trace
+		\item $\forall$  pid, $\forall$ tid : ($\square$ (thready $\longrightarrow$   $\diamondsuit$ thrunning)) - Satisfied by trace
+		\item $\exists$ $=1$ pid, $\exists$ $=2$ tid: $\lnot$ ($\square$ ( $\lnot$ thdestroy)) - Vioated by trace
+		\item $\forall$ $>50\%$ pid, $\forall$ $>50\%$ tid: ( $\diamondsuit$ ( thsem $\vee$ thmutex ) ) - Vioated by trace
+	\end{itemize}
+	
+	\item MTL parser has been developed, the monitor for MTL is being developed. \textbf{Update}: Including both Past-time and future-time MTL variants. 
+	\item For developing predicate specification language, work is done on analysis of script engines which can be used. Beanshell \url{http://www.beanshell.org/intro.html} is under consideration along with JavaScript engines which can be embedded into java code, and the predicate definitions could be specified using the languages of these engines.
+	
+	\item IronForge data, and running \rithm on the properties of the data. Work in Progress.
+	
+	\item Integration of DIME + \rithm - Papers worked on for analyzing the previous work. Work done by Smolka et al. focuses on using Markov Chains for providing probabilistic estimates on the satisfaction of specifications. On similar lines, Probabilistic Timed Automata could be used for specifying 
+	models of systems which exhibit the characteristics of incomplete-data for verification along with the requirement of hard real-time deadlines.
+	\item 'Lessons Learnt' section for journal paper is being worked upon.
+	\item \rithm's monitor using specifications in the format of regular expressions is being enhanced so that monitoring is trace-length independent. The coding is in progress and we now use \url{http://www.brics.dk/automaton/doc/index.html} to create automaton from regular expression and input trace ti this automaton event by event. 
+	
+	
+	
+\end{itemize}
+    
+
+\section{Previous Results}
 \begin{itemize}
 \item
 Verbose LTL parser is implemented which uses verbose representation of LTL operators. \newline
@@ -46,25 +91,13 @@ java rithm.driver.RiTHMBrewer
 -traceParserClass=CSV 
 -specParserClass=VLTL
 \end{lstlisting}
-\item
-MTL parser has been developed, the monitor for MTL is being developed. MTL monitor will be used for benchmarks to be submitted for CRV'15 competition.
+
 
 \item \rithm can import data in CSV format and the CSV data-importer is intergrated with \rithm framework
 
 \item
 \rithm source has been refactored to use maven for project source code and build management. \rithm source has been enhanced to drop some legacy APIs to make the design more scalable
 
-\item \rithm's monitor using specifications in the format of regular expressions is being enhanced so that monitoring is trace-length independent. The coding is in progress and we now use \url{http://www.brics.dk/automaton/doc/index.html} to create automaton from regular expression and input trace ti this automaton event by event. 
-
 \item API key feature for \rithm is being implemented. The API key will allow access management for \rithm when used in server mode.
 \end{itemize}
-\section{Previous Results}
-\begin{itemize}
-	\item \rithm Parser APIs - The interfaces and abstract classes for parser API, which can be called by other \rithm components along with examples of the parser developed using the APIs  including LTL, PTLTL parser which are added to the framework. The code is at \url{https://github.com/yogirjoshi/Parser}
-	\item \rithm Monitor APIs - The interfaces and abstract classes for Monitor APIs. Example implementations of the interface include LTL Monitor, MTL monitor (work in progress). The code is at \url{https://github.com/yogirjoshi/MonitorFactory}	
-	\item \rithm Data Tools - The APIs allow to input trace data to \rithm in various formats such as XML and CSV. The code is at \url{https://github.com/yogirjoshi/DataFactory}
-	\item \rithm Network Interface - Allows to connect to a \rithm instance using a \rithm protocol which is coded over top of TCP. The scripts are being tested. Th\url{https://github.com/yogirjoshi/RiTHMServer}
-	\item The above components interact with each other for providing a monitoring framework, and dynamically classes are loaded using Java's class-loader to allow loading plugins (which implement required \rithm interfaces) from the jars. 
-
-\end{itemize}
-\end{document}          
+\end{document}      
