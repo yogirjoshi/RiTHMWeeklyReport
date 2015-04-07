@@ -1,0 +1,70 @@
+\documentclass[]{article}
+\usepackage[nodayofweek,level]{datetime}
+\usepackage{hyperref}
+\usepackage{listings}
+\newcommand{\rithm}{\textbf{RiTHM}\space}
+
+% Title Page
+\title{\rithm development status report}
+\author{}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Details about the current progress of \rithm development and journal paper
+\end{abstract}
+\section{Current Results}
+\begin{itemize}
+\item
+Verbose LTL parser is implemented which uses verbose representation of LTL operators. \newline
+The code is at \url{https://github.com/yogirjoshi/parsertools.git}.
+
+\item
+Verbose LTL parser is integrated with existing LTL monitor. Some new APIs added to Parser interface for rewriting the specifications into interchangable formats. The code is at \url{https://github.com/yogirjoshi/monitortools.git}
+
+\item
+\rithm plugin loader is implemented so that different monitors, parsers and data-importers can be plugged in and used. \newline
+Below example starts \rithm instance to monitor LTL specifications using four valued semantics, and it uses CSV data
+\begin{lstlisting}
+java rithm.driver.RiTHMBrewer 
+-specFile=/home/y2joshi/InputFiles/specsQnx 
+-dataFile=/home/y2joshi/Input1.csv
+-outputFile=/home/y2joshi/InputFiles/output3.html 
+-monitorClass=LTL4 
+-traceParserClass=CSV 
+-specParserClass=LTL
+\end{lstlisting}
+Similarly, \rithm's another instance can be started to monitor using Verbose LTL (using 4-valued semantics), and it uses trace data in XML format 
+\begin{lstlisting}
+java rithm.driver.RiTHMBrewer 
+-specFile=/home/y2joshi/InputFiles/specsQnx 
+-dataFile=/home/y2joshi/Input1.XML
+-outputFile=/home/y2joshi/InputFiles/output3.html 
+-monitorClass=LTL4 
+-traceParserClass=CSV 
+-specParserClass=VLTL
+\end{lstlisting}
+\item
+MTL parser has been developed, the monitor for MTL is being developed. MTL monitor will be used for benchmarks to be submitted for CRV'15 competition.
+
+\item \rithm can import data in CSV format and the CSV data-importer is intergrated with \rithm framework
+
+\item
+\rithm source has been refactored to use maven for project source code and build management. \rithm source has been enhanced to drop some legacy APIs to make the design more scalable
+
+\item \rithm's monitor using specifications in the format of regular expressions is being enhanced so that monitoring is trace-length independent. The coding is in progress and we now use \url{http://www.brics.dk/automaton/doc/index.html} to create automaton from regular expression and input trace ti this automaton event by event. 
+
+\item API key feature for \rithm is being implemented. The API key will allow access management for \rithm when used in server mode.
+\end{itemize}
+\section{Previous Results}
+\begin{itemize}
+	\item \rithm Parser APIs - The interfaces and abstract classes for parser API, which can be called by other \rithm components along with examples of the parser developed using the APIs  including LTL, PTLTL parser which are added to the framework. The code is at \url{https://github.com/yogirjoshi/Parser}
+	\item \rithm Monitor APIs - The interfaces and abstract classes for Monitor APIs. Example implementations of the interface include LTL Monitor, MTL monitor (work in progress). The code is at \url{https://github.com/yogirjoshi/MonitorFactory}	
+	\item \rithm Data Tools - The APIs allow to input trace data to \rithm in various formats such as XML and CSV. The code is at \url{https://github.com/yogirjoshi/DataFactory}
+	\item \rithm Network Interface - Allows to connect to a \rithm instance using a \rithm protocol which is coded over top of TCP. The scripts are being tested. Th\url{https://github.com/yogirjoshi/RiTHMServer}
+	\item The above components interact with each other for providing a monitoring framework, and dynamically classes are loaded using Java's class-loader to allow loading plugins (which implement required \rithm interfaces) from the jars. 
+
+\end{itemize}
+\end{document}          
