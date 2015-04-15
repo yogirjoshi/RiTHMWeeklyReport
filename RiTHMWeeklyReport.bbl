@@ -1,0 +1,48 @@
+\begin{thebibliography}{1}
+
+\bibitem{RefWorks:15}
+{\sc Bauer, A., Leucker, M., and Schallhart, C.}
+\newblock The good, the bad, and the ugly, but how ugly is ugly?
+\newblock In {\em Runtime Verification\/} (2007), Springer, pp.~126--138.
+
+\bibitem{RefWorks:12}
+{\sc Bauer, A., Leucker, M., and Schallhart, C.}
+\newblock Comparing ltl semantics for runtime verification.
+\newblock {\em Journal of Logic and Computation 20}, 3 (2010), 651--674.
+
+\bibitem{RefWorks:10}
+{\sc Bauer, A., Leucker, M., and Schallhart, C.}
+\newblock Runtime verification for ltl and tltl.
+\newblock {\em ACM Transactions on Software Engineering and Methodology (TOSEM)
+  20}, 4 (2011), 14.
+
+\bibitem{RefWorks:11}
+{\sc Chang, E., Manna, Z., and Pnueli, A.}
+\newblock {\em Characterization of temporal property classes}.
+\newblock Automata, Languages and Programming. Springer, 1992, pp.~474--486.
+
+\bibitem{RefWorks:9}
+{\sc Falcone, Y., Fernandez, J.-C., and Mounier, L.}
+\newblock What can you verify and enforce at runtime?
+\newblock {\em International Journal on Software Tools for Technology Transfer
+  14}, 3 (2012), 349--382.
+
+\bibitem{RefWorks:17}
+{\sc Morgenstern, A., Gesell, M., and Schneider, K.}
+\newblock An asymptotically correct finite path semantics for ltl.
+\newblock In {\em Logic for Programming, Artificial Intelligence, and
+  Reasoning\/} (2012), Springer, pp.~304--319.
+
+\bibitem{RefWorks:18}
+{\sc Pnueli, A.}
+\newblock The temporal logic of programs.
+\newblock In {\em Foundations of Computer Science, 1977., 18th Annual Symposium
+  on\/} (1977), IEEE, pp.~46--57.
+
+\bibitem{RefWorks:14}
+{\sc Stoller, S.~D., Bartocci, E., Seyster, J., Grosu, R., Havelund, K.,
+  Smolka, S.~A., and Zadok, E.}
+\newblock Runtime verification with state estimation.
+\newblock In {\em Runtime Verification\/} (2012), Springer, pp.~193--207.
+
+\end{thebibliography}

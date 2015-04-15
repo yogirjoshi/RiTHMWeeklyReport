@@ -88,10 +88,14 @@ Details about the current progress of \rithm development and journal paper
 	\item \rithm's monitor using specifications in the format of regular expressions is being enhanced so that monitoring is trace-length independent. The coding is in progress and we now use \url{http://www.brics.dk/automaton/doc/index.html} to create automaton from regular expression and input trace ti this automaton event by event. 
 	
 
-	
-
 	\end{itemize}
+
+\section{Open Questions}
+	\begin{itemize}
+	\item Revising the defintion of \emph{soundness} in case of \tloss{} and proving the \emph{soundness} of the decision prodcedure. The idea used will be  - in spite of \tloss{}, the verdict of monitor would remain identical to the verdict delivered by the monitor in absence of \tloss{}. 
 	
+	\item Whether to include the proof of \textbf{lemma} that none of formulae in TPTL (Timed Propositional Temporal Logic) for which the interval used in any of the \emph{until} operators in the TPTL formula is unbounded, are \emph{monitorable} in event of \tloss. 	 
+	\end{itemize}
 \section{Previous Results}
 
 		\subsection{Runtime verification in case of Missing Events}
